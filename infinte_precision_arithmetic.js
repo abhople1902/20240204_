@@ -364,7 +364,6 @@ function MagnitudeChecker(primary, secondary) {
 
 /////////////////////////////////////////////////////////////////////////////
 //Testing
-//Bug - when num1 is small, multiplication is wrong
 
 let num1 = 12
 let num2 = 102
