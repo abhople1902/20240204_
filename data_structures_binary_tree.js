@@ -1,4 +1,4 @@
-/**Implementation of Binary Search Tree in Javascript
+/**Implementation of Binary Tree in Javascript
  * @author Ayush Bhople
  */
 
@@ -17,23 +17,23 @@ class Leaf {
   }
 }
 /**
-* Here is the MedicinalTree class
+* Here is the BinTree class
 */
 
-class MedicinalTree {
+class BinTree {
   /**
-   * Create a Medicinal Tree.
+   * Create a Binary Tree.
    * @constructor
    */
   constructor() {
-      // root of the Medicinal Tree  
+      // root of the Binary Tree  
       this.root = null;
   }
  
 
   insert(data) {
   /**
-   * Insert data into the Medicinal Tree.
+   * Insert data into the Binary Tree.
    * @param {*} data - The data to be inserted.
    */
       var newLeaf = new Leaf(data);
@@ -43,7 +43,7 @@ class MedicinalTree {
           this.insertLeaf(this.root, newLeaf);
       }
   }
-  /**Insert a Leaf into the Medicinal Tree.
+  /**Insert a Leaf into the Binary Tree.
    * @private
    * @param {Leaf} leaf - The current leaf 
    * @param {Leaf} newLeaf - The new Leaf to be inserted.
@@ -65,7 +65,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Remove data from the Medicinal Tree.
+   * Remove data from the Binary Tree.
    * @param {*} data - The data to be removed.
    */
 
@@ -73,7 +73,7 @@ class MedicinalTree {
       this.root = this.removeLeaf(this.root, data);
   }
   /**
-   * Remove a Leaf from the Medicinal Tree.
+   * Remove a Leaf from the Binary Tree.
    * @private
    * @param {Leaf} leaf - The current leaf that has been checked.
    * @param {*} key - The data of the leaf to be removed.
@@ -108,7 +108,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Inorder traversal of the Medicinal Tree.
+   * Inorder traversal of the Binary Tree.
    * @param {Leaf} leaf - The current leaf that has been checked.
    */
   inorder(leaf) {
@@ -119,7 +119,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Preorder traversal of the Medicinal Tree.
+   * Preorder traversal of the Binary Tree.
    * @param {Leaf} leaf - The current leaf that has been checked.
    */
   preorder(leaf) {
@@ -130,7 +130,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Postorder traversal of the Medicinal Tree.
+   * Postorder traversal of the Binary Tree.
    * @param {Leaf} leaf - The current leaf that has been checked.
    */
 
@@ -142,7 +142,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Find the minimum leaf in the Medicinal Tree.
+   * Find the minimum leaf in the Binary Tree.
    * @param {Leaf} leaf - The current leaf being evaluated.
    * @returns {Leaf} - The minimum leaf.
    */
@@ -154,7 +154,7 @@ class MedicinalTree {
       }
   }
   /**
-   * Get the root leaf of the MT
+   * Get the root leaf of the BT
    * @returns {Leaf} - The root leaf.
    */
 
@@ -162,9 +162,9 @@ class MedicinalTree {
       return this.root;
   }
   /**
-   * Search for a leaf with a specific data value in the Medicinal Tree.
+   * Search for a leaf with a specific data value in the Binary Tree.
    * @param {Leaf} leaf - The current leaf being evaluated.
-   * @param {*} data - The data value to search in MT
+   * @param {*} data - The data value to search in BT
    * @returns {Leaf|null} - The leaf with the specified data value or null if not found.
    */
 
@@ -181,37 +181,37 @@ class MedicinalTree {
   }
 }
 
-var MT = new MedicinalTree();
-MT.insert(15);
-MT.insert(25);
-MT.insert(10);
-MT.insert(7);
-MT.insert(22);
-MT.insert(17);
-MT.insert(13);
-MT.insert(5);
-MT.insert(9);
-MT.insert(27);
+var BT = new BinTree();
+BT.insert(15);
+BT.insert(25);
+BT.insert(10);
+BT.insert(7);
+BT.insert(22);
+BT.insert(17);
+BT.insert(13);
+BT.insert(5);
+BT.insert(9);
+BT.insert(27);
 
-var root = MT.getRootLeaf();
+var root = BT.getRootLeaf();
 
 console.log("Inorder traversal:");
-MT.inorder(root);
+BT.inorder(root);
 
-MT.remove(5);
+BT.remove(5);
 console.log("Inorder traversal after removing 5:");
-MT.inorder(root);
+BT.inorder(root);
 
-MT.remove(7);
+BT.remove(7);
 console.log("Inorder traversal after removing 7:");
-MT.inorder(root);
+BT.inorder(root);
 
-MT.remove(15);
+BT.remove(15);
 console.log("Inorder traversal after removing 15:");
-MT.inorder(root);
+BT.inorder(root);
 
 console.log("Preorder traversal:");
-MT.preorder(root);
+BT.preorder(root);
 
 console.log("Postorder traversal:");
-MT.postorder(root);
+BT.postorder(root);
