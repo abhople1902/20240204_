@@ -365,8 +365,8 @@ function MagnitudeChecker(primary, secondary) {
 /////////////////////////////////////////////////////////////////////////////
 //Testing
 
-let num1 = 12
-let num2 = 102
+let num1 = 102
+let num2 = 12
 
 let pri = PrimarySplitter(num1)
 let sec = SecondarySplitter(num2)
